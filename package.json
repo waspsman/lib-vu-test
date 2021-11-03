@@ -1,11 +1,16 @@
 {
   "name": "lib-test",
+  "files": ["dist/*", "types/*"],
+  "main": "dist/lib-test.umd.js",
+  "types": "./types/index.d.ts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name 'lib-test' src/main.ts",
+    "rollup": "rollup -c"
   },
   "dependencies": {
     "core-js": "^3.6.5",
